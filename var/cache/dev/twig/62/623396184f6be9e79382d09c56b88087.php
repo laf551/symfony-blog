@@ -97,32 +97,33 @@ class __TwigTemplate_e8d6a7e21d46cef322265cac88a450cd extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<div class=\"container mt-5\">
-    <h1>Créer un nouvel article</h1>
-    
-    ";
+        yield "    <div class=\"container mt-5\">
+        <h1>Créer un nouvel article</h1>
+        
+        ";
         // line 9
         yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
         yield "
-        ";
+            ";
         // line 10
         yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "title", [], "any", false, false, false, 10), 'row', ["attr" => ["class" => "form-control mb-3"]]);
         yield "
-        ";
+            ";
         // line 11
         yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), "content", [], "any", false, false, false, 11), 'row', ["attr" => ["class" => "form-control mb-3", "rows" => 10]]);
         yield "
-        
-        <button type=\"submit\" class=\"btn btn-success\">Publier l'article</button>
-        <a href=\"";
+            
+            <button type=\"submit\" class=\"btn btn-success\">Publier l'article</button>
+            <a href=\"";
         // line 14
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_list");
         yield "\" class=\"btn btn-secondary\">Annuler</a>
-    ";
+        ";
         // line 15
         yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'form_end');
         yield "
-</div>
+
+    </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -164,20 +165,21 @@ class __TwigTemplate_e8d6a7e21d46cef322265cac88a450cd extends Template
 {% block title %}Nouvel article{% endblock %}
 
 {% block body %}
-<div class=\"container mt-5\">
-    <h1>Créer un nouvel article</h1>
-    
-    {{ form_start(form) }}
-        {{ form_row(form.title, {'attr': {'class': 'form-control mb-3'}}) }}
-        {{ form_row(form.content, {'attr': {'class': 'form-control mb-3', 'rows': 10}}) }}
+    <div class=\"container mt-5\">
+        <h1>Créer un nouvel article</h1>
         
-        <button type=\"submit\" class=\"btn btn-success\">Publier l'article</button>
-        <a href=\"{{ path('article_list') }}\" class=\"btn btn-secondary\">Annuler</a>
-    {{ form_end(form) }}
-</div>
+        {{ form_start(form) }}
+            {{ form_row(form.title, {'attr': {'class': 'form-control mb-3'} }) }}
+            {{ form_row(form.content, {'attr': {'class': 'form-control mb-3', 'rows': 10 }}) }}
+            
+            <button type=\"submit\" class=\"btn btn-success\">Publier l'article</button>
+            <a href=\"{{ path('article_list') }}\" class=\"btn btn-secondary\">Annuler</a>
+        {{ form_end(form) }}
+
+    </div>
 {% endblock %}
 
 
-", "article/new.html.twig", "/workspaces/symfony-blog/blog/templates/article/new.html.twig");
+", "article/new.html.twig", "/workspaces/symfony-blog/templates/article/new.html.twig");
     }
 }

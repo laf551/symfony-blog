@@ -18,11 +18,20 @@
                     <a href="{{ path('article_show',{id:article.id}) }}" class="btn btn-primary">
                         Lire la suite
                     </a>
+                    <a href ="{{ path('article_edit', {id:article.id})}}" class="btn btn-primary">Modifier</a>
+                    
+                    <!--Bouton meth Post avec confirmation Js -->
+                    <form method="post" action="{{ path('article_delete',{id:article.id}) }}" style ="display:inline;"
+                    onsubmit="return confirm('Etes-vous sûr de vouloir supprimer cet article?');">
+                        <button type="submit" class="btn btn-danger"> Supprimer</button>
+                    </form>
+                    
+                
                 </div>
             </div>
         </div>
         {% endfor %}
-        </div>
+    </div>
     {% endif %}
 </div>
 {% endblock%}

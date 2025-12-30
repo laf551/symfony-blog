@@ -21,7 +21,11 @@ return [
     'article_list' => [[], ['_controller' => 'App\\Controller\\ArticleController::list'], [], [['text', '/articles']], [], [], []],
     'article_new' => [[], ['_controller' => 'App\\Controller\\ArticleController::new'], [], [['text', '/articles/new']], [], [], []],
     'article_show' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/articles']], [], [], []],
+    'article_edit' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/articles']], [], [], []],
+    'article_delete' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/articles']], [], [], []],
     'App\Controller\ArticleController::list' => [[], ['_controller' => 'App\\Controller\\ArticleController::list'], [], [['text', '/articles']], [], [], []],
     'App\Controller\ArticleController::new' => [[], ['_controller' => 'App\\Controller\\ArticleController::new'], [], [['text', '/articles/new']], [], [], []],
     'App\Controller\ArticleController::show' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/articles']], [], [], []],
+    'App\Controller\ArticleController::edit' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/articles']], [], [], []],
+    'App\Controller\ArticleController::delete' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/articles']], [], [], []],
 ];

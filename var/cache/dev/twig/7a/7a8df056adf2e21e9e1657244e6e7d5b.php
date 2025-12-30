@@ -136,6 +136,21 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
                 yield "\" class=\"btn btn-primary\">
                         Lire la suite
                     </a>
+                    <a href =\"";
+                // line 21
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 21)]), "html", null, true);
+                yield "\" class=\"btn btn-primary\">Modifier</a>
+                    
+                    <!--Bouton meth Post avec confirmation Js -->
+                    <form method=\"post\" action=\"";
+                // line 24
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 24)]), "html", null, true);
+                yield "\" style =\"display:inline;\"
+                    onsubmit=\"return confirm('Etes-vous sûr de vouloir supprimer cet article?');\">
+                        <button type=\"submit\" class=\"btn btn-danger\"> Supprimer</button>
+                    </form>
+                    
+                
                 </div>
             </div>
         </div>
@@ -144,11 +159,11 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['article'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 25
-            yield "        </div>
+            // line 34
+            yield "    </div>
     ";
         }
-        // line 27
+        // line 36
         yield "</div>
 ";
         
@@ -181,7 +196,7 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  152 => 27,  148 => 25,  135 => 18,  131 => 17,  127 => 16,  123 => 15,  118 => 12,  114 => 11,  111 => 10,  107 => 8,  105 => 7,  100 => 4,  87 => 3,  64 => 2,  41 => 1,);
+        return array (  167 => 36,  163 => 34,  147 => 24,  141 => 21,  135 => 18,  131 => 17,  127 => 16,  123 => 15,  118 => 12,  114 => 11,  111 => 10,  107 => 8,  105 => 7,  100 => 4,  87 => 3,  64 => 2,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -206,13 +221,22 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
                     <a href=\"{{ path('article_show',{id:article.id}) }}\" class=\"btn btn-primary\">
                         Lire la suite
                     </a>
+                    <a href =\"{{ path('article_edit', {id:article.id})}}\" class=\"btn btn-primary\">Modifier</a>
+                    
+                    <!--Bouton meth Post avec confirmation Js -->
+                    <form method=\"post\" action=\"{{ path('article_delete',{id:article.id}) }}\" style =\"display:inline;\"
+                    onsubmit=\"return confirm('Etes-vous sûr de vouloir supprimer cet article?');\">
+                        <button type=\"submit\" class=\"btn btn-danger\"> Supprimer</button>
+                    </form>
+                    
+                
                 </div>
             </div>
         </div>
         {% endfor %}
-        </div>
+    </div>
     {% endif %}
 </div>
-{% endblock%}", "article/list.html.twig", "/workspaces/symfony-blog/blog/templates/article/list.html.twig");
+{% endblock%}", "article/list.html.twig", "/workspaces/symfony-blog/templates/article/list.html.twig");
     }
 }

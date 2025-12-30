@@ -172,6 +172,6 @@ class __TwigTemplate_c01eee0ee3532566780b1f3f771cb6d4 extends Template
     <a href=\"{{ path('article_list') }}\" class=\"btn btn-secondary\">← Retour à la liste</a>
 </div>
 {% endblock %}
-", "article/show.html.twig", "/workspaces/symfony-blog/blog/templates/article/show.html.twig");
+", "article/show.html.twig", "/workspaces/symfony-blog/templates/article/show.html.twig");
     }
 }

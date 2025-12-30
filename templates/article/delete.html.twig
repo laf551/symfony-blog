@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Suppression {% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Suppression validation de l'{{article.title}} </h1>
+        
+        <button type = "submit" class="btn btn-success"> Valider Modification </button>
+            <a href="{{ path('article_list')}}" class="btn btn-secondary">Annuler</a>
+
+        
+    </div>  
+{ %endblock %}

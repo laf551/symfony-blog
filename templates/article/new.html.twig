@@ -3,17 +3,19 @@
 {% block title %}Nouvel article{% endblock %}
 
 {% block body %}
-<div class="container mt-5">
-    <h1>Créer un nouvel article</h1>
-    
-    {{ form_start(form) }}
-        {{ form_row(form.title, {'attr': {'class': 'form-control mb-3'}}) }}
-        {{ form_row(form.content, {'attr': {'class': 'form-control mb-3', 'rows': 10}}) }}
+    <div class="container mt-5">
+        <h1>Créer un nouvel article</h1>
         
-        <button type="submit" class="btn btn-success">Publier l'article</button>
-        <a href="{{ path('article_list') }}" class="btn btn-secondary">Annuler</a>
-    {{ form_end(form) }}
-</div>
+        <!--POST-->
+        {{ form_start(form) }}
+            {{ form_row(form.title, {'attr': {'class': 'form-control mb-3'} }) }}
+            {{ form_row(form.content, {'attr': {'class': 'form-control mb-3', 'rows': 10 }}) }}
+            
+            <button type="submit" class="btn btn-success">Publier l'article</button>
+            <a href="{{ path('article_list') }}" class="btn btn-secondary">Annuler</a>
+        {{ form_end(form) }}
+
+    </div>
 {% endblock %}
 
 

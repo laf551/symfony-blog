@@ -1,0 +1,18 @@
+{% extends 'base.html.twig'%}
+
+{%block title %} Modification article {%endblock%}
+
+{%block body %}
+    <div class="container mt-5">
+        <h1>Modification de l'article: {{ article.title}}</h>
+
+        {{form_start(form)}}
+            
+            <button type = "submit" class="btn btn-success"> Valider Modification </button>
+            <a href="{{ path('article_list')}}" class="btn btn-secondary">Annuler</a>
+                    
+        {{form_end(form)}}
+    </div>
+
+{% endblock %}
+
