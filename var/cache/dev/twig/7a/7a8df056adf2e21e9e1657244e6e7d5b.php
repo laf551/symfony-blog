@@ -99,7 +99,7 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
         // line 4
         yield "
 <div class=\"container mt-5\">
-    <h1> Mon blog symfony </h1> 
+    <h1> 🦋 Mon blog  </h1> 
     ";
         // line 7
         if (Twig\Extension\CoreExtension::testEmpty((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 7, $this->source); })()))) {
@@ -118,33 +118,38 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
                 yield "        <div class=\"col-md-6 mb-4\">
             <div class=\"card\">
                 <div class=\"card-body\">
-                    <h5 class=\"card-title\">";
+                    <h5 class=\"card-title\"> 🍒 ";
                 // line 15
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 15), "html", null, true);
                 yield "</h5>
+                <!--afficher catégorie :-->
+                    <h3>Catégorie de l'article : 📘 ";
+                // line 17
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "category", [], "any", false, false, false, 17), "html", null, true);
+                yield " </h3>
                     <p class=\"card-test\">";
-                // line 16
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::slice($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 16), 0, 150), "html", null, true);
+                // line 18
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::slice($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 18), 0, 150), "html", null, true);
                 yield "..</p>
                     <p class=\"text-muted\">";
-                // line 17
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "publishedAt", [], "any", false, false, false, 17), "d/m/Y"), "html", null, true);
+                // line 19
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["article"], "publishedAt", [], "any", false, false, false, 19), "d/m/Y"), "html", null, true);
                 yield "</p>
                     <a href=\"";
-                // line 18
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 18)]), "html", null, true);
+                // line 20
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 20)]), "html", null, true);
                 yield "\" class=\"btn btn-primary\">
                         Lire la suite
                     </a>
                     <a href =\"";
-                // line 21
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 21)]), "html", null, true);
+                // line 23
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 23)]), "html", null, true);
                 yield "\" class=\"btn btn-primary\">Modifier</a>
                     
                     <!--Bouton meth Post avec confirmation Js -->
                     <form method=\"post\" action=\"";
-                // line 24
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 24)]), "html", null, true);
+                // line 26
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 26)]), "html", null, true);
                 yield "\" style =\"display:inline;\"
                     onsubmit=\"return confirm('Etes-vous sûr de vouloir supprimer cet article?');\">
                         <button type=\"submit\" class=\"btn btn-danger\"> Supprimer</button>
@@ -159,11 +164,11 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['article'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 34
+            // line 36
             yield "    </div>
     ";
         }
-        // line 36
+        // line 38
         yield "</div>
 ";
         
@@ -196,7 +201,7 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  167 => 36,  163 => 34,  147 => 24,  141 => 21,  135 => 18,  131 => 17,  127 => 16,  123 => 15,  118 => 12,  114 => 11,  111 => 10,  107 => 8,  105 => 7,  100 => 4,  87 => 3,  64 => 2,  41 => 1,);
+        return array (  172 => 38,  168 => 36,  152 => 26,  146 => 23,  140 => 20,  136 => 19,  132 => 18,  128 => 17,  123 => 15,  118 => 12,  114 => 11,  111 => 10,  107 => 8,  105 => 7,  100 => 4,  87 => 3,  64 => 2,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -206,7 +211,7 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
 {% block body %}
 
 <div class=\"container mt-5\">
-    <h1> Mon blog symfony </h1> 
+    <h1> 🦋 Mon blog  </h1> 
     {% if articles is empty %}
         <p>Aucun aricle pour le moment.</p>
     {% else %}
@@ -215,7 +220,9 @@ class __TwigTemplate_5ef6000edfbb6c6d4720e3b601637780 extends Template
         <div class=\"col-md-6 mb-4\">
             <div class=\"card\">
                 <div class=\"card-body\">
-                    <h5 class=\"card-title\">{{ article.title }}</h5>
+                    <h5 class=\"card-title\"> 🍒 {{ article.title }}</h5>
+                <!--afficher catégorie :-->
+                    <h3>Catégorie de l'article : 📘 {{article.category}} </h3>
                     <p class=\"card-test\">{{ article.content|slice(0, 150) }}..</p>
                     <p class=\"text-muted\">{{ article.publishedAt | date('d/m/Y')}}</p>
                     <a href=\"{{ path('article_show',{id:article.id}) }}\" class=\"btn btn-primary\">

@@ -100,27 +100,28 @@ class __TwigTemplate_e8d6a7e21d46cef322265cac88a450cd extends Template
         yield "    <div class=\"container mt-5\">
         <h1>Créer un nouvel article</h1>
         
+        <!--POST-->
         ";
-        // line 9
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
-        yield "
-            ";
         // line 10
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "title", [], "any", false, false, false, 10), 'row', ["attr" => ["class" => "form-control mb-3"]]);
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'form_start');
         yield "
             ";
         // line 11
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), "content", [], "any", false, false, false, 11), 'row', ["attr" => ["class" => "form-control mb-3", "rows" => 10]]);
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), "title", [], "any", false, false, false, 11), 'row', ["attr" => ["class" => "form-control mb-3"]]);
+        yield "
+            ";
+        // line 12
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), "content", [], "any", false, false, false, 12), 'row', ["attr" => ["class" => "form-control mb-3", "rows" => 10]]);
         yield "
             
             <button type=\"submit\" class=\"btn btn-success\">Publier l'article</button>
             <a href=\"";
-        // line 14
+        // line 15
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_list");
         yield "\" class=\"btn btn-secondary\">Annuler</a>
         ";
-        // line 15
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'form_end');
+        // line 16
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_end');
         yield "
 
     </div>
@@ -155,7 +156,7 @@ class __TwigTemplate_e8d6a7e21d46cef322265cac88a450cd extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  123 => 15,  119 => 14,  113 => 11,  109 => 10,  105 => 9,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  124 => 16,  120 => 15,  114 => 12,  110 => 11,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -168,6 +169,7 @@ class __TwigTemplate_e8d6a7e21d46cef322265cac88a450cd extends Template
     <div class=\"container mt-5\">
         <h1>Créer un nouvel article</h1>
         
+        <!--POST-->
         {{ form_start(form) }}
             {{ form_row(form.title, {'attr': {'class': 'form-control mb-3'} }) }}
             {{ form_row(form.content, {'attr': {'class': 'form-control mb-3', 'rows': 10 }}) }}

@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class="container mt-5">
-    <h1> Mon blog symfony </h1> 
+    <h1> 🦋 Mon blog  </h1> 
     {% if articles is empty %}
         <p>Aucun aricle pour le moment.</p>
     {% else %}
@@ -12,7 +12,9 @@
         <div class="col-md-6 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{{ article.title }}</h5>
+                    <h5 class="card-title"> 🍒 {{ article.title }}</h5>
+                <!--afficher catégorie :-->
+                    <!-- <h3>Catégorie de l'article : 📘 {{article.category}} </h3> --> 
                     <p class="card-test">{{ article.content|slice(0, 150) }}..</p>
                     <p class="text-muted">{{ article.publishedAt | date('d/m/Y')}}</p>
                     <a href="{{ path('article_show',{id:article.id}) }}" class="btn btn-primary">

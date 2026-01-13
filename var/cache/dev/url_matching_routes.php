@@ -17,6 +17,11 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/articles' => [[['_route' => 'article_list', '_controller' => 'App\\Controller\\ArticleController::list'], null, null, null, false, false, null]],
         '/articles/new' => [[['_route' => 'article_new', '_controller' => 'App\\Controller\\ArticleController::new'], null, null, null, false, false, null]],
+        '/category' => [
+            [['_route' => 'category_list', '_controller' => 'App\\Controller\\CategoryController::list'], null, null, null, false, false, null],
+            [['_route' => 'app_category', '_controller' => 'App\\Controller\\CategoryController::index'], null, null, null, false, false, null],
+        ],
+        '/category/new' => [[['_route' => 'category_new', '_controller' => 'App\\Controller\\CategoryController::new'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

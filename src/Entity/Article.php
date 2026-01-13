@@ -23,6 +23,10 @@ class Article
     #[ORM\Column]
     private ?\DateTime $publishedAt = null;
 
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +64,19 @@ class Article
     public function setPublishedAt(\DateTime $publishedAt): static
     {
         $this->publishedAt = $publishedAt;
+
+        return $this;
+    }
+    
+    //clé étrangère : depuis CATEGORY
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }
